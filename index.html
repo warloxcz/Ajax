@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Ajax </title>
+    <style>
+        @media only screen and (max-width: 600px) {
+            body {
+               font-size: 40px;
+            }
+            input, button{
+                font-size: 35px;
+            }
+            input[type=radio]{
+                width: 20px;
+                height: 20px;
+            }
+        }   
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+        .form-users{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        .form-users div, .form-drinks div{
+            border-bottom: 2px #ff7373;
+        }
+        input[type=submit]{
+            margin: 15px 0;
+        }
+        .list-btn-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        .drink-wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .range-wrap{
+            display: flex;
+            justify-content: end;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div>
+    <form action="http://ajax1.lmsoft.cz/procedure.php?cmd=saveDrinks" method="post">
+    <div class="form-users">
+
+    </div>
+    <div class="form-drinks">
+
+    </div>
+    <div class="list-btn-wrapper">
+    <input type="submit" value="Poslat" id="sendBtn">
+    </div>
+    </form>
+    <br>
+    <div class="list-btn-wrapper">
+        <button id="list-btn">Ukázat seznam</button>
+    </div>
+    
+</div>
+</div>
+</body>
+</html>
